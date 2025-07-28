@@ -1,3 +1,4 @@
+  :root{
   --primary-color: #FF4F7B; /* Blush pink */
   --primary-dark: #e0456d;
   --secondary-color: #2D3748;
@@ -2165,10 +2166,17 @@ a {
     color: var(--primary-color);
 }
 
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 10s linear infinite;
+}
+
+
 .scrolling-tech {
-    display: flex;
-    justify-content: center;
     margin-top: 50px;
+    left: 25vw;
+    width: 50vw;
     overflow: hidden;
     position: relative;
 }
@@ -2201,12 +2209,11 @@ a {
     border-radius: 50px;
     box-shadow: var(--box-shadow);
     min-width: 250px;
-    animation: scroll 20s linear infinite;
 }
 
 @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-250px * 7)); }
+    100% { transform: translateX(calc(-50vw)); }
 }
 
 .tech-item i {
