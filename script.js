@@ -1,9 +1,3 @@
-/**
- * MedicoTech™ - Main JavaScript File
- * Includes all interactive functionality with new AI features
- * Version 2.1 - Clinical AI Enhancements
- */
-
 document.addEventListener('DOMContentLoaded', function() {
     // ======================
     // 1. Mobile Navigation
