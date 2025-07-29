@@ -253,3 +253,12 @@ const config = { attributes: true };
 if (document.getElementById('form-confirmation')) {
     observer.observe(document.getElementById('form-confirmation'), config);
 }
+
+const track = document.getElementById('carousel-track');
+const items = Array.from(track.children);
+
+// Duplicate items to create the illusion of an infinite loop
+items.forEach(item => {
+const clone = item.cloneNode(true);
+track.appendChild(clone);
+});
