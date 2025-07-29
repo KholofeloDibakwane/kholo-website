@@ -7,6 +7,124 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for media profile section */
+        .media-profile {
+            background: white;
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .profile-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 50px;
+            padding: 0 20px;
+        }
+        
+        .profile-image {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            height: fit-content;
+        }
+        
+        .profile-image img {
+            width: 100%;
+            display: block;
+        }
+        
+        .profile-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .profile-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .profile-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .profile-bio {
+            margin-bottom: 30px;
+        }
+        
+        .profile-bio p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .profile-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .highlight-item {
+            background: rgba(255, 79, 123, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary-color);
+        }
+        
+        .highlight-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+        
+        .highlight-value {
+            font-size: 0.95rem;
+            color: var(--dark-gray);
+        }
+        
+        .media-logos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+            align-items: center;
+        }
+        
+        .media-logo {
+            height: 30px;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+        
+        .media-logo:hover {
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .profile-image {
+                width: 70%;
+                margin: 0 auto;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Animated Background Elements -->
@@ -81,35 +199,62 @@
         </div>
     </section>
 
-    <!-- Founder Section -->
-    <section class="founder-section">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>Meet Our Founder</h2>
-                <p>The clinical expertise behind our technology</p>
+    <!-- Media Profile Section -->
+    <section class="media-profile">
+        <div class="profile-container">
+            <div class="profile-image">
+                <img src="https://via.placeholder.com/300x400" alt="Psychologist Thato Masia">
+                <div class="profile-badge">Founder & CEO</div>
             </div>
-            
-            <div class="founder-content">
-                <div class="founder-image">
-                    <img src="https://via.placeholder.com/300x400" alt="Dr. Thato Masia">
+            <div class="profile-content">
+                <h2>Meet Psychologist Thato Masia</h2>
+                <span class="profile-title">Clinical Psychologist | Mental Health Advocate | Entrepreneur</span>
+                
+                <div class="profile-bio">
+                    <p>Psychologist Thato Masia is rewriting the conversation around mental health—literally and figuratively. Known for her clear, relatable voice on national TV and digital platforms, she brings authority and empathy to every discussion, making complex mental health topics simple, practical, and human.</p>
+                    
+                    <p>At just 29, Thato has become a trusted voice in South Africa's mental health space, appearing on SABC and other major channels since 2024, where her calm presence, insightful analysis, and authentic delivery continue to resonate with audiences across generations.</p>
+                    
+                    <p>But Thato isn't only a media voice—she's a qualified Clinical Psychologist, registered with the HPCSA, and an entrepreneur passionate about building solutions that empower healthcare professionals. After earning her Master's in Clinical Psychology from Rhodes University (with distinction for her research thesis), she launched That Psychologist Thato, a private practice dedicated to accessible, ethical mental health care.</p>
                 </div>
-                <div class="founder-bio">
-                    <h3>Dr. Thato Masia</h3>
-                    <p class="title">Clinical Psychologist & Founder</p>
-                    
-                    <div class="bio-text">
-                        <p>As a practicing clinical psychologist, Dr. Masia experienced firsthand the challenges of medico-legal reporting. The time-consuming nature of report writing, often taking up to 8 hours per case, inspired her to develop a solution that would maintain clinical integrity while improving efficiency.</p>
-                        
-                        <p>With a background in both psychology and technology, Dr. Masia recognized the potential for AI-assisted tools to support rather than replace clinical judgment. Her vision for MedicoTech™ was born from this intersection of clinical expertise and technological innovation.</p>
-                        
-                        <p>Dr. Masia remains actively involved in both clinical practice and product development, ensuring that all MedicoTech™ solutions remain grounded in real-world clinical needs and ethical standards.</p>
+                
+                <div class="profile-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-title">Age</div>
+                        <div class="highlight-value">29</div>
                     </div>
-                    
-                    <div class="founder-quote">
-                        <blockquote>
-                            "Technology should enhance clinical expertise, not replace it. Our tools are designed to give time back to healthcare professionals while maintaining the highest standards of patient care."
-                        </blockquote>
+                    <div class="highlight-item">
+                        <div class="highlight-title">Degrees</div>
+                        <div class="highlight-value">MA Clinical Psychology (Rhodes), BA Philosophy & Psychology (UP)</div>
                     </div>
+                    <div class="highlight-item">
+                        <div class="highlight-title">Awards</div>
+                        <div class="highlight-value">Allan Gray Fellow</div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-title">Languages</div>
+                        <div class="highlight-value">English, isiZulu, siSwati, isiXhosa, Sesotho, Afrikaans</div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-title">Therapeutic Skills</div>
+                        <div class="highlight-value">CBT, DBT, Family Therapy, Group Therapy</div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-title">Registrations</div>
+                        <div class="highlight-value">HPCSA, Board of Healthcare Funders</div>
+                    </div>
+                </div>
+                
+                <div class="profile-bio">
+                    <p>Recognised as an Allan Gray Fellow early in her academic journey, Thato brings entrepreneurial energy to psychology. She's the founder of MedicoTech™, an innovation-driven company that created CP Writer™, an AI-assisted medico-legal reporting tool. Designed by clinicians for clinicians, CP Writer™ reduces reporting time from 8 hours to 2, helping professionals focus more on patients, not paperwork.</p>
+                    
+                    <p>Today, Thato continues to engage top experts—including Prof. Solly Rataemane and other SA's leadership in psychology and medicine—while sharing her insights on platforms that shape public opinion. Her mission is simple: make mental health conversations easier, smarter, and more relatable—while building tools that make clinicians' work lighter and more impactful.</p>
+                </div>
+                
+                <div class="media-logos">
+                    <img src="https://via.placeholder.com/100x30" alt="SABC" class="media-logo">
+                    <img src="https://via.placeholder.com/100x30" alt="You Magazine" class="media-logo">
+                    <span>Featured in national media</span>
                 </div>
             </div>
         </div>
